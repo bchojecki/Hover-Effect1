@@ -1,0 +1,113 @@
+/* CSS RESET */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ul, ol {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* CSS RESET END */
+body {
+    font-family: Verdana, Geneva, sans-serif;
+}
+*, :before, :after {
+    box-sizing: border-box;
+}
+a:link, a:visited, a:active, a:hover { 
+    text-decoration: none;
+    color: rgba(60, 59, 59, 1);
+    -webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+}
+[class*="nav-"] {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+ul {
+    margin: 100 0 50 0;
+}
+li {
+    width: 240px;
+    margin: 0 auto;
+}
+a {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 240px;
+    height: 60px;
+    z-index: 1;
+    transition: 0.30s ease color;
+    overflow: hidden;
+}
+a:before {
+    content: '';
+    display: block;
+    z-index: -1;
+    position: absolute;
+    left: -150%;
+    top: 0;
+    width: 238px;
+    height: 100%;
+    transition: 0.30s ease left;
+}
+a:hover:before {
+    left: 0;
+}
+.nav-bright {
+    background-color: rgba(245, 245, 245, 1);
+}
+.nav-dark {
+    background-color: rgba(25, 25, 25, 1); 
+}
+.nav-bright li {
+    background: rgba(245, 245, 245, 1);
+    border-top: 1px solid rgba(230, 230, 230, 1); 
+    border-left: 1px solid rgba(230, 230, 230, 1); 
+    border-right: 1px solid rgba(230, 230, 230, 1); 
+}
+.nav-dark li {
+    background: rgba(25, 25, 25, 1);   
+    border-top: 1px solid rgba(51, 51, 51, 1);
+    border-left: 1px solid rgba(51, 51, 51, 1);
+    border-right: 1px solid rgba(51, 51, 51, 1);
+}
+.nav-bright li:last-child {
+    border-bottom: 1px solid rgba(227, 227, 227, 1);
+}
+.nav-dark li:last-child {
+    border-bottom: 1px solid rgba(51, 51, 51, 1);
+}
+.nav-bright a:before {
+    background: rgba(252, 252, 252, 1);
+    border-right: 3px solid rgba(0, 147, 28, 1);
+}
+.nav-dark a:before {
+    background: rgba(38, 38, 38, 1);
+    border-right: 3px solid rgba(255, 127, 0, 1);
+}
